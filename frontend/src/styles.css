@@ -1,0 +1,176 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
+}
+
+.app-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0.5rem 0 2rem;
+  color: #8b949e;
+}
+
+.landing-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.landing-card {
+  width: 100%;
+  max-width: 420px;
+  background: #010409;
+  border: 1px solid #30363d;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.landing-card label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #c9d1d9;
+}
+
+.landing-card input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  background: #0d1117;
+  color: #c9d1d9;
+  padding: 0.95rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.landing-card button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background: #238636;
+  color: white;
+  padding: 0.95rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.landing-note {
+  margin-top: 1rem;
+  color: #8b949e;
+  font-size: 0.95rem;
+}
+
+.chat-window {
+  min-height: 420px;
+  background: #010409;
+  border: 1px solid #30363d;
+  border-radius: 18px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  line-height: 1.5;
+}
+
+.message.system {
+  align-self: center;
+  background: #161b22;
+  color: #8b949e;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #1f6feb;
+  color: white;
+}
+
+.message.assistant {
+  align-self: flex-start;
+  background: #161b22;
+  color: #c9d1d9;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+input {
+  flex: 1;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  background: #0d1117;
+  color: #c9d1d9;
+  padding: 0.95rem 1rem;
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  background: #238636;
+  color: white;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 12px;
+  background: #238636;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.secondary-button {
+  width: 100%;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  background: transparent;
+  color: #c9d1d9;
+  padding: 0.95rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
