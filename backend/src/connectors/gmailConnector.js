@@ -4,9 +4,9 @@ import { getOAuthClient } from './googleAuth.js';
 /**
  * List Gmail messages.
  * @param {object} opts
- * @param {string} [opts.q]          Gmail search query (e.g. "stripe payment")
- * @param {number} [opts.maxResults] Max messages to return (default 50)
- * @param {string} [opts.labelIds]   Label filter (default 'INBOX')
+ * @param {string} [opts.q]          
+ * @param {number} [opts.maxResults] 
+ * @param {string} [opts.labelIds]   
  */
 export async function listGmailMessages({ q = '', maxResults = 50, labelIds } = {}) {
   const auth = getOAuthClient();
@@ -39,8 +39,12 @@ export async function searchGmailMessages(q = '', maxResults = 30) {
     maxResults: 30,
     q: 'in:inbox',
   });
-
-  const searches = [inboxFetch];
+  const sentFetch = gmail.users.messages.list({
+  userId: 'me',
+  maxResults: 30,
+  q: 'in:sent',
+  });
+  const searches = [inboxFetch, sentFetch];
 
   if (q && q.trim()) {
     searches.push(
